@@ -41,9 +41,17 @@ function getDataForGeolocation() {
             $('#message').html("<p>We couldn't retrive your data for your longitude and latitude. Please true again.</p>");
         },
         success: function(data){
-            $('#message').html("<p>It is success.</p>")
-             console.log("data");
-        console.log(data);
+            $('#message').html("<p>It is success.</p>");
+         
+console.log(data)
+            for (var obj in data.acList){
+                for(var innerObj in obj){
+                    if(innerObj.Year == "2016"){
+                        console.log("innerObj");
+                        console.log(innerObj.Year);
+                    }
+                }
+            }
         }
 
     });
