@@ -89,4 +89,39 @@
 .main-container .none{
     width: 100%;
     margin: 0 auto;
+    margin-top: 20px;
+}
+
+.main-container .none #message{
+    width: 60%;
+    margin:0 auto;
+}
+
+.main-container .none #message p{
+    text-align: center;
+    font-weight: 700;
+    font-size:14px;
+    margin-top: 20px;
+}
+
+.main-container .none #list{
+    width:60%;
+    margin:0 auto;
+    
+
+}
+
+
+.main-container .none #list ul li{
+    width: 30%;
+    display:inline-flex;
+    box-sizing: border-box;
+    margin-right: 20px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.main-container .none #list ul:nth-child(even){
+    background-color: #2185AB;
+    color:#ffffff;
 }
