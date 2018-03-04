@@ -23,6 +23,8 @@ function getLocation(callback) {
     }
 }
 
+
+
 function getDataForGeolocation() {
     getLocation(function(pos){
     var crd = pos.coords;
@@ -39,10 +41,13 @@ function getDataForGeolocation() {
             dataType: 'jsonp',
             error: function() {
                 $('#message').html("<p>We couldn't retrive your data for your longitude and latitude. Please true again.</p>");
+                $('#message').addClass('red');
+                
             },
             success: function(data){
-                $('#message').html("<p>It is success.</p>");
-             
+                $('#message').html("<p>Date retrieval successful.</p>");
+                $('#message').addClass('green'); 
+                $('.box-terms').attr('style', 'display:none');
                 //console.log(data)
                 var listToShow = [];
                 var listAlt = [];
@@ -59,18 +64,15 @@ function getDataForGeolocation() {
                         listToShow.sort(function(a, b){
                             return b.Alt - a.Alt;
                         });
-                       // for(var i = 0; i < listToShow.length; i++){
-                           
-                            listOfFlights(listToShow);
-                        //}
-
+                        listOfFlights(listToShow);
                         break;
                     }
 
-                }
+                }                
             }
         });
     });
+    setTimeout(getDataForGeolocation, 1000);
 }
 
 function errorCallback(err) {
@@ -78,6 +80,7 @@ function errorCallback(err) {
 };
 
 function listOfFlights(listToShow){
+    $('#list').empty();
     $('#list').append('<h2>Flights:</h2>');
     for (var i = 0; i < listToShow.length; i++) {
          $('#list').append('<ul><li>Flight code: '+ listToShow[i].Id +'</li>' + 

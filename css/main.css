@@ -93,8 +93,19 @@
 }
 
 .main-container .none #message{
-    width: 60%;
+    padding: 10px;
     margin:0 auto;
+    max-width: 30%;
+}
+
+.red{
+    border:1px solid darkred;
+    background-color: pink;
+}
+
+.green{
+    border:1px solid darkgreen;
+    background-color:lightgreen;
 }
 
 .main-container .none #message p{
@@ -124,4 +135,20 @@
 .main-container .none #list ul:nth-child(even){
     background-color: #2185AB;
     color:#ffffff;
+}
+
+@media only screen and (max-width: 1200px){
+    .main-container .none #list ul li{
+      width:25%;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    .main-container .none #list ul li:first-child{
+        
+    }
+}
+
+@media only screen and (max-width: 1200px){
+   
 }
