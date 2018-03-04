@@ -99,7 +99,7 @@
 }
 
 .red{
-    border:1px solid darkred;
+    border:1px solid red;
     background-color: pink;
 }
 
@@ -137,18 +137,113 @@
     color:#ffffff;
 }
 
-@media only screen and (max-width: 1200px){
-    .main-container .none #list ul li{
-      width:25%;
-      font-size: 16px;
-      width: 100%;
+@media only screen and (max-width: 1200px) and (min-width: 1000px){
+    .main-container .none #list{
+        width: 100%
     }
 
-    .main-container .none #list ul li:first-child{
-        
+    .main-container .none #list ul li{
+      width:30%;
+      font-size: 16px;
+    }
+
+    .main-container .none #list h2,
+    .main-container .none #list ul{
+        padding-left: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 999px) and (min-width: 800px){
+    .main-container .none #list{
+        width:100%;
+    }
+
+     .main-container .none #list ul li{
+      width:25%;
+      font-size: 16px;
+    }
+    
+     .main-container .none #list h2,
+     .main-container .none #list ul{
+        padding-left: 10px;
+     }
+}
+
+@media only screen and (max-width: 799px) and (min-width: 640px){
+    .main-container .none #list{
+        width: 100%;
+    }
+
+     .main-container .none #list h2,
+     .main-container .none #list ul{
+        padding-left: 10px;
+     }
+
+
+   .main-container .none #list ul li{
+      width:30%;
+      font-size: 16px;
     }
 }
 
-@media only screen and (max-width: 1200px){
-   
+@media only screen and (max-width: 639px) and (min-width: 592px){
+     .main-container .none #list{
+        width: 100%;
+    }
+
+     .main-container .none #list h2,
+     .main-container .none #list ul{
+        padding-left: 15px;
+     }
+
+
+   .main-container .none #list ul li{
+      width:26%;
+      font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 586px) and (min-width: 360px){
+    .main-container header .box{
+        display:none;
+    }
+    .main-container header{
+        padding-bottom: 0;
+    }
+
+    .main-container header .logo img{
+        margin:0 auto;
+        display: block;
+    }
+
+    .main-container .box-terms .terms h1 {
+       font-size: 20px;
+    }
+
+    .main-container .box-terms .terms p {
+        
+        font-size: 18px;
+    }
+
+    .green{
+        display: none;
+    }
+
+     .main-container .none #list{
+        width: 100%;
+    }
+
+     .main-container .none #list h2,
+     .main-container .none #list ul{
+        padding-left: 15px;
+     }
+
+
+   .main-container .none #list ul li{
+      width:26%;
+      font-size: 16px;
+    }
+
+
 }
