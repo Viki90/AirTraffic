@@ -85,3 +85,8 @@
     float: right;
     margin-right: 20px;
 }
+
+.main-container .none{
+    width: 100%;
+    margin: 0 auto;
+}
